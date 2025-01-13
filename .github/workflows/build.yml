@@ -18,6 +18,6 @@ jobs:
       - name: Build dotnet
         run: dotnet build --configuration Release # /WarnAsError
       - name: pack dotnet
-        run: dotnet pack SCE.Core/SCE.Core.csproj --configuration Release
+        run: dotnet pack SCE.Core/SCE.Core.csproj /p:PackageID=SharpCodeEditor --configuration Release
       - name: ls
         run: unzip -l /home/runner/work/SharpCodeEditor/SharpCodeEditor/SCE.Core/bin/Release/SCE.Core.1.0.0.nupkg
