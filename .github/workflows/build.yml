@@ -20,4 +20,4 @@ jobs:
       - name: pack dotnet
         run: dotnet pack SCE.Core/SCE.Core.csproj /p:PackageID=SharpCodeEditor --configuration Release
       - name: ls
-        run: unzip -l /home/runner/work/SharpCodeEditor/SharpCodeEditor/SCE.Core/bin/Release/SCE.Core.1.0.0.nupkg
+        run: unzip -l /home/runner/work/SharpCodeEditor/SharpCodeEditor/SCE.Core/bin/Release/SharpCodeEditor.1.0.0.nupkg
