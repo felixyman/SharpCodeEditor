@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: ["master"]
+    branches: ["bugfix/nuget"]
   pull_request:
-    branches: ["master"]
+    branches: ["bugfix/nuget"]
 
 jobs:
   build:
@@ -17,3 +17,5 @@ jobs:
           npm install
       - name: Build dotnet
         run: dotnet build --configuration Release # /WarnAsError
+      - name: pack dotnet
+        run: dotnet pack SCE.Core/SCE.Core.csproj --configuration Release
