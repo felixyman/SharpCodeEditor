@@ -15,8 +15,6 @@ jobs:
         working-directory: SCE.Core/assets
         run: |
           npm install
-      - name: Build dotnet
-        run: dotnet build --configuration Release # /WarnAsError
       - name: pack dotnet
         run: dotnet pack SCE.Core/SCE.Core.csproj /p:PackageID=SharpCodeEditor --configuration Release
       - name: ls
